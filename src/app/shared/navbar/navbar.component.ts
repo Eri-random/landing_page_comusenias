@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  activeSection: string = '';
 
   public sidebarItems = [
     {label:'Nuestra App',url:'#nuestraApp'},
-    {label:'Funciones', url:'#funciones'},
-    {label:'Nuestro Equipo', url:'#nuestroEquipo'},
+    {label:'Características', url:'#funciones'},
     {label:'Contacto', url:'#contacto'},
   ];
 

@@ -25,40 +25,6 @@ export class LandingPageComponent implements OnInit {
     }
   ]
 
-  public equipo = [
-    {
-      img:'assets/pablo.png',
-      nombre:'Pablo Carballo',
-      profesion:'Mobile Developer',
-      rol:'Scrum máster',
-      linkedin:'https://www.linkedin.com/in/pablojaviercarballo/',
-      github:'https://github.com/pableArg'
-    },
-    {
-      img:'assets/victor.svg',
-      nombre:'Victor Orue',
-      profesion:'Mobile Developer',
-      rol:'Dev Ops',
-      linkedin:'https://www.linkedin.com/in/victor-adrian-orue/',
-      github:'https://github.com/vao-source-code'
-    },
-    {
-      img:'assets/juan.svg',
-      nombre:'Juan Guerrero',
-      profesion:'Mobile Developer',
-      rol:'Product Owner',
-      linkedin:'https://www.linkedin.com/in/juan-matias-guerrero-aguilar-a8b389184/',
-      github:'https://github.com/juanmatiasg'
-    },
-    {
-      img:'assets/fabian.svg',
-      nombre:'Fabian Zarate',
-      profesion:'Mobile Developer',
-      rol:'Frontend Designer',
-      linkedin:'https://www.linkedin.com/in/fabian-alejandro-zarate/',
-      github:'https://github.com/lanzarlosdados'
-    },
-  ]
 
   constructor() { }
 

@@ -1,16 +1,31 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand logo-completo" href="#"><img src="assets/logo.svg" alt="logo con nombre"></a>
-      <a class="navbar-brand logo-icono d-none" href="#"><img src="assets/lenguaje-de-senas.svg" alt="logo simple"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item" *ngFor="let item of sidebarItems">
-            <a class="nav-link active" aria-current="page" href="{{item.url}}">{{item.label}}</a>
-          </li>
-        </ul>
-      </div>
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg top-0 my-3 py-2 start-0 end-0 mx-4">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="#">
+            <img src="assets/logo_v_2.svg">
+          </a>
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse pt-3 pb-3 py-lg-0 w-100 my-sm-0 mb-3" id="navigation">
+            <ul class="navbar-nav navbar-nav-hover w-100 gap-2">
+              <li *ngFor="let item of sidebarItems" class="nav-item dropdown dropdown-hover">
+                <a 
+                  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center font-weight-bold" 
+                  href="{{item.url}}" 
+                  [class.active-link]="activeSection === item.url" 
+                  (click)="activeSection = item.url">{{item.label}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-</nav>
+  </div>
+</div>
