@@ -1,11 +1,3 @@
-.backgroud-decoration{
-    background-image: url('/assets/decoration.png');
-    background-size: contain;
-    background-repeat: no-repeat; 
-    height: 500px;
-    padding: 0 1rem;
-}
-
 .text-content {
   z-index: 2;
   position: relative;
@@ -49,8 +41,79 @@
   transform: scale(1.1);
 }
 
-@media(max-width:570px){
-  .backgroud-decoration{
-    background-size: cover;
+
+.circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ajusta el círculo al tamaño del contenedor */
+  height: 100%;
+  z-index: 1; /* Asegura que el círculo esté detrás de la niña */
+}
+
+.girl-image {
+  position: absolute;
+  left: 50%;
+  bottom: 0rem;
+  transform: translateX(-50%);
+  z-index: 2; /* La niña debe estar sobre el círculo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.girl-image:hover {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.sign-image{
+  position: absolute;
+  width: 140px;
+  right: 55%;
+  bottom: 82%;
+  transform: translateX(-50%);
+  z-index: 3;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+}
+
+.sign-image:hover {
+  transform: translateX(-50%) scale(1.1); /* Aumenta un poco la imagen */
+}
+
+.trophy-image {
+  position: absolute;
+  width: 140px;
+  left: 70%;
+  bottom: -10%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: rotateAndFlip 15s linear infinite;
+}
+
+@keyframes rotateAndFlip {
+  0% {
+    transform: translateX(-50%) rotate(0deg) scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: translateX(-50%) rotate(90deg) scaleX(1.2) scaleY(1.2); /* Gira 90 grados y escala */
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg) scaleX(1) scaleY(1); /* Gira 180 grados */
+  }
+  75% {
+    transform: translateX(-50%) rotate(270deg) scaleX(1.2) scaleY(1.2); /* Gira 270 grados y escala */
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) scaleX(1) scaleY(1); /* Gira 360 grados */
   }
 }
