@@ -18,7 +18,7 @@
 
 .banner-text {
   color: var(--color-light-grey);
-  font-size: 24px;
+  font-size: 24px !important;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-in-out forwards 0.3s;
@@ -39,6 +39,23 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:850px) {
+  .circle-container{
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width:768px) {
+  .banner-img {
+   margin-top:4rem; ;
+  }
+
+  #nuestraApp {
+    margin-top:14rem;
+  }
 }
 
 .circle-image {
@@ -67,7 +84,7 @@
 
 .sign-image{
   position: absolute;
-  width: 140px;
+  width: 120px;
   right: 55%;
   bottom: 82%;
   transform: translateX(-50%);
@@ -86,23 +103,13 @@
   bottom: -10%;
   transform: translateX(-50%);
   z-index: 3;
-  animation: rotateAndFlip 15s linear infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-@keyframes rotateAndFlip {
-  0% {
-    transform: translateX(-50%) rotate(0deg) scaleX(1) scaleY(1);
-  }
-  25% {
-    transform: translateX(-50%) rotate(90deg) scaleX(1.2) scaleY(1.2); /* Gira 90 grados y escala */
-  }
-  50% {
-    transform: translateX(-50%) rotate(180deg) scaleX(1) scaleY(1); /* Gira 180 grados */
-  }
-  75% {
-    transform: translateX(-50%) rotate(270deg) scaleX(1.2) scaleY(1.2); /* Gira 270 grados y escala */
-  }
-  100% {
-    transform: translateX(-50%) rotate(360deg) scaleX(1) scaleY(1); /* Gira 360 grados */
-  }
+.trophy-image:hover {
+  transform: translateX(-50%) scale(1.1); /* Aumenta un poco la imagen */
+}
+
+.animation-container {
+  height: 300px;
 }

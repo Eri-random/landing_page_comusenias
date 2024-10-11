@@ -12,3 +12,7 @@ body { margin: 0!important; font-family: 'Lato', sans-serif !important }
 img {
     max-width: 100%;
 }
+
+.title{
+    font-weight:600;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LottiePlayer } from 'lottie-web'; // Asegúrate de que esté instalado correctamente
 
 @Component({
   selector: 'app-landing-page',
@@ -28,7 +29,27 @@ export class LandingPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {    
+    this.loadAnimation('animation-numbers', 'assets/animations/Animation-numbers.json');
+    this.loadAnimation('animation-premium', 'assets/animations/Animation-premium.json');
+    this.loadAnimation('animation-clock', 'assets/animations/Animation-clock.json');
+  }
+
+  loadAnimation(containerId: string, path: string) {
+    const lottie: LottiePlayer = require('lottie-web'); // Cargar lottie-web correctamente
+
+    const container = document.getElementById(containerId);
+    if (container) {
+      lottie.loadAnimation({
+        container: container, // ID del contenedor
+        path: path, // Ruta del archivo de animación JSON
+        renderer: 'svg',
+        loop: true,
+        autoplay: true
+      });
+    } else {
+      console.error(`El contenedor con ID ${containerId} no se encontró.`);
+    }
   }
 
 }
