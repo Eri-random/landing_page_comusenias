@@ -10,7 +10,8 @@ export class NavbarComponent implements OnInit {
 
   public sidebarItems = [
     {label:'Nuestra App',url:'#nuestraApp'},
-    {label:'Características', url:'#funciones'},
+    {label:'Sobre nosotros', url:'#nosotros'},
+    {label:'Funcionamiento', url:'#funcionamiento'},
     {label:'Contacto', url:'#contacto'},
   ];
 

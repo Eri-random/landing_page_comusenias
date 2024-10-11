@@ -5,6 +5,7 @@ body { margin: 0!important; font-family: 'Lato', sans-serif !important }
 :root{
     --color-primary: #7584f2; /* Color primario */
     --color-secondary: #6c55b7; /* Color secundario */
+    --color-light-blue: #B2EBF2;
     --color-dark-grey: #3D3D3D; 
     --color-light-grey: #757575;
 }
