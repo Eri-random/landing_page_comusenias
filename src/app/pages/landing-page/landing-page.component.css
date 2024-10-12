@@ -1,3 +1,12 @@
+.backgroud-decoration{
+  position: relative;
+  background-image: url('/assets/decoration.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  z-index: 2;
+}
+
 .banner-title {
   text-transform: uppercase;
   color: var(--color-secondary);
@@ -51,10 +60,6 @@
 @media (max-width: 768px) {
   .banner-img {
     margin-top: 4rem;
-  }
-
-  #nuestraApp {
-    margin-top: 14rem;
   }
 
   .title-decoration {
@@ -134,23 +139,59 @@
   border-radius: 50%;
 }
 
+#nuestraApp {
+  margin-top: 7rem;
+}
+
 .animation-container {
   height: 300px;
 }
 
-.background-container {
+.background-grey {
   position: relative;
 }
 
-.background-container::before {
+.background-grey::before {
   content: '';
   position: absolute;
   top: -32rem;
   left: 0;
   width: 100%;
-  height: 160vh;
-  background-image: url('../../../assets/background-decoration.png');
+  height: 220vh;
+  background-image: url('/assets/background-decoration.png');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.background-violet {
+  position: relative;
+}
+
+.background-violet::before {
+  content: '';
+  position: absolute;
+  top: -15rem;
+  left: 0;
+  width: 100%;
+  height: 160vh;
+  background-image: url('/assets/background-violet.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Agranda la card en ambos ejes (horizontal y vertical) */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.card img {
+  max-width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+  height: auto;
 }

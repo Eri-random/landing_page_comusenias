@@ -1,19 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
-body { margin: 0!important; font-family: 'Lato', sans-serif !important }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0 !important;
+  font-family: "Lato", sans-serif !important;
+}
 
-:root{
-    --color-primary: #7584f2; /* Color primario */
-    --color-secondary: #6c55b7; /* Color secundario */
-    --color-light-blue: #B2EBF2;
-    --color-dark-grey: #3D3D3D; 
-    --color-light-grey: #757575;
+:root {
+  --color-primary: #7584f2; /* Color primario */
+  --color-secondary: #6c55b7; /* Color secundario */
+  --color-light-blue: #b2ebf2;
+  --color-dark-grey: #3d3d3d;
+  --color-light-grey: #757575;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.title{
-    font-weight:600;
+.title {
+  font-weight: 600;
+}
+
+.title-white {
+  font-weight: 600;
+  color: white;
 }
