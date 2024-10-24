@@ -181,17 +181,11 @@
   z-index: -1;
 }
 
-.card {
+.card-img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.card:hover {
+.card-img:hover {
   transform: scale(1.1); /* Agranda la card en ambos ejes (horizontal y vertical) */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-.card img {
-  max-width: 100%; /* Asegura que la imagen se ajuste al contenedor */
-  height: auto;
 }
