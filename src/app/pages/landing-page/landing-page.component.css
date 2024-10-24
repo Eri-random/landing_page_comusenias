@@ -65,6 +65,26 @@
   .title-decoration {
     width: 20%!important;
   }
+
+  #nuestraApp {
+    margin-top: 15rem!important;
+  }
+
+  #nuestraApp p:first-of-type {
+    width: 100%!important;
+    text-align: left!important;
+  }
+
+  .background-violet::before {
+    top: -30rem!important;
+    height: 370vh!important;
+  }
+
+  .background-grey::before {
+    top: -70rem!important;
+    height: 320vh!important;
+  }
+  
 }
 
 .circle-image {
